@@ -2,9 +2,7 @@
 
 > **Hackathon**: Multimodal AI Hackathon 2026 — **Track D: Personalized Tutoring & Adaptive Learning**
 > **Challenge**: Build an AI study companion that unifies lecture videos, textbooks, and slides into a source-cited knowledge base, and uses it to run adaptive assessments and personalized tutoring.
-> **Group**: DevOps-CA2-Group (max 4 students)
-> **Repo target**: `aditisharmas11/DevOps-CA2_2023_27` (push due **5 Oct 2026**)
-> **Excel signup row** (rubric): Track D — Personalized Tutoring & Adaptive Learning
+
 
 ---
 
@@ -119,18 +117,7 @@ docker compose -f docker/docker-compose.yml up --build
 
 ---
 
-## 🛠️ DevOps CA2 Steps 1–6 Mapping
 
-*(These are your DevOps subject CA2 graded deliverables — "next part" after hackathon prototype.)*
-
-| Step | Deliverable | Location |
-|------|-------------|----------|
-| 1 · Deployment Strategy | 6-stage GitHub Actions CI/CD (lint → build → validate → push → deploy → smoke + auto rollback on 5xx) + pipeline diagram | `.github/workflows/ci-cd.yml:1-L240` · `docs/step1-pipeline-diagram.md` |
-| 2 · Configuration Management & IaC | 6 idempotent Ansible roles (common, docker, kubernetes_base, kubernetes_controller, monitoring, app_env) provisioning Ubuntu 22.04 target | `ansible/site.yml` · `ansible/roles/common/docker/kubernetes_base/kubernetes_controller/monitoring/app_env/` · `ansible/inventory.ini` |
-| 3 · Containerization & Orchestration | Multi-stage Dockerfile.backend, Dockerfile.frontend + docker-compose; K8s namespace, backend-config (secrets placeholder), RollingUpdate Deployments + PVCs for SQLite/Chroma, ClusterIP Services, HPA at 70% CPU with demo commands for `kubectl rollout status/undo`. | `docker/{Dockerfile.backend,Dockerfile.frontend,docker-compose.yml}` · `k8s/00-namespace.yaml,10-backend-config.yaml,11-backend.yaml,20-frontend.yaml,30-hpa.yaml` + `k8s/README-COMMANDS.md` inside manifests |
-| 4 · Monitoring & Logging | Prometheus scrape + alert rules (alertmanager for 5xx / backend down / K8s pod restart); Grafana auto-provisioned datasource + 9-panel study-overview dashboard JSON (mastery, chunk growth, latency, error-rate, RAG retrieval distribution, quiz scores, K8s resource usage) | `monitoring/prometheus/{prometheus.yml,alerts.yml}` · `monitoring/grafana/{datasources.yml,dashboards.yml}` · `monitoring/grafana/dashboards/study-overview.json` |
-| 5 · Reflection, Report & Slides | 5-page individual-reflection report + architecture + monitoring screenshots section; 4–5 slide Google Slides template (presentation) + per-slide speaker notes. | `docs/step5-report.md` · `docs/slides/README.md` (slides content + speaker notes) |
-| 6 · Bonus (external DevOps challenge) | Multimodal AI Hackathon Track D (this README) + submission guide / Devpost / hackathon registration tips | `hackathon/TRACK-D-SUBMISSION.md` · `hackathon/STEP6-BONUS-GUIDE.md` · `hackathon/assets/README.md` |
 
 ---
 
