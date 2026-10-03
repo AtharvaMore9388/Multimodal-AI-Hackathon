@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+app/.pytest_cache/
+
+# Virtual Environment
+venv/
+app/venv/
+ENV/
+env/
+.venv/
+
+# Environment Variables
+.env
+app/.env
+
+# Node & Frontend
+node_modules/
+dist/
+.next/
+out/
+build/
+
+# Temporary logs & test artifacts
+*.log
+app/*.log
+app/_hit_output.log
+pip_install.log
+pip_install2.log
+check_db.py
+app/check_db.py
+clean_db.py
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
